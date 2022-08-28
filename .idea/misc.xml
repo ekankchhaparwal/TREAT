@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1885" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/add_floatbutton.xml" value="0.1885" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/edit_view_background.xml" value="0.193" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1885" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.1885" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1885" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/input_tag_backgrond.xml" value="0.192" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/light_boundary.xml" value="0.193" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/list_background.xml" value="0.191" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/list_view_background.xml" value="0.192" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/round_corner_textview.xml" value="0.192" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/round_corners.xml" value="0.193" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/straight_background.xml" value="0.192" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/drawable/text_moreround.xml" value="0.192" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_analysis.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_analysis_of_expenses.xml" value="0.33" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_expenses_list.xml" value="0.33" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_particular_trip_details.xml" value="0.33" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/activity_trip_members.xml" value="0.5" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/custom_expenselist.xml" value="0.33" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/layout/custom_listview.xml" value="0.33" />
+        <entry key="..\:/Users/ekank/AndroidStudioProjects/TREAT/app/src/main/res/xml/round_corners.xml" value="0.18489583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
