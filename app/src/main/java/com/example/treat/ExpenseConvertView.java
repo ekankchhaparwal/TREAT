@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,6 +34,7 @@ public class ExpenseConvertView extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_expenselist, parent, false);
         TextView t = convertView.findViewById(R.id.expense_text2);
+
         t.setText(getItem(position));
         return convertView;
     }

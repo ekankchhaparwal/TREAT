@@ -4,7 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <corners android:radius="20dp"  />
+    <corners android:radius="0dp"
+        android:topLeftRadius="10dp"
+
+        android:bottomRightRadius="20dp"/>
 
     <!-- This is the border color -->
 
@@ -12,7 +15,7 @@
         android:centerColor="#22FBDE"
         android:endColor="#16CFEC"
         />
-    <stroke android:color="@color/black" android:width="3px"/>
+    <stroke android:color="#322626" android:width="4px"/>
     <!--- This is the background color -->
     <!--    <solid android:color="#CDB8B8" />-->
 

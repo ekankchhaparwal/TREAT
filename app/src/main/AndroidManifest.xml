@@ -14,9 +14,6 @@
         android:theme="@style/Theme.TREAT"
         tools:targetApi="31">
         <activity
-            android:name=".Analysis"
-            android:exported="false" />
-        <activity
             android:name=".Analysis_of_Expenses"
             android:exported="false" />
         <activity

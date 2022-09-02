@@ -15,7 +15,7 @@
         android:centerColor="#22FBDE"
         android:endColor="#16CFEC"
         />
-    <stroke android:color="#322626" android:width="7px"/>
+    <stroke android:color="#322626" android:width="4px"/>
     <!--- This is the background color -->
     <!--    <solid android:color="#CDB8B8" />-->
 

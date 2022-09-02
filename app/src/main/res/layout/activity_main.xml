@@ -23,14 +23,14 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="182dp"
-        android:layout_height="37dp"
+        android:layout_width="187dp"
+        android:layout_height="41dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/round_corner_textview"
+        android:background="@drawable/round_corners"
         android:text="Confirm new TREAT"
         android:textColor="#0C0C0C"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,7 +55,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/round_corner_textview"
+        android:background="@drawable/checktext_background"
         android:gravity="center|center_horizontal"
         android:paddingLeft="8dp"
         android:textAlignment="center"

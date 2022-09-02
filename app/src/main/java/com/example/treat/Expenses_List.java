@@ -1,14 +1,18 @@
 package com.example.treat;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,6 +61,7 @@ public class Expenses_List extends AppCompatActivity {
                 if (expense.length()>0)
                 {
                     Expenses.add(expense);
+                   makeToast("Expense Added");
                     listview5.setAdapter(expenseConvertView);
                     try {
                         sharedPreferences.edit().putString(TRIP_NAME+TREAT_NAME,ObjectSerializer.serialize(Expenses)).apply();
@@ -91,5 +96,78 @@ public class Expenses_List extends AppCompatActivity {
         });
 
 
+        listview5.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String presentAmount = adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(Expenses_List.this, adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
+
+                final AlertDialog.Builder alert = new AlertDialog.Builder(Expenses_List.this);
+
+                View mview = getLayoutInflater().inflate(R.layout.custom_dialog_box,null);
+                TextView presentExpense= mview.findViewById(R.id.textView3);
+                TextView st = mview.findViewById(R.id.textView6);
+                EditText updateExpense = mview.findViewById(R.id.updateExpense);
+                Button updatedButton = mview.findViewById(R.id.updated);
+                Button cancel = mview.findViewById(R.id.cancelUpdate);
+
+                alert.setView(mview);
+
+                final AlertDialog alertDialog = alert.create();
+                alertDialog.setCanceledOnTouchOutside(false);
+                presentExpense.setText("Your current Expense is : \u20B9"+presentAmount);
+                updatedButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        String newExpense = updateExpense.getText().toString();
+                        if (newExpense.length()==0)
+                        {
+                            updateExpense.setError("Add new Expense");
+                        }
+                        else
+                        {
+                            int nE = Integer.parseInt(newExpense);
+                            Expenses.set(i,newExpense);
+                            listview5.setAdapter(expenseConvertView);
+                            try {
+                                sharedPreferences.edit().putString(TRIP_NAME+TREAT_NAME,ObjectSerializer.serialize(Expenses)).apply();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            if (Expenses.size()>0)
+                            {
+                                int a = 0;
+                                for (int i = 0;i<Expenses.size();i++)
+                                {
+                                    a = Integer.parseInt(Expenses.get(i))+a;
+                                }
+                                sharedPreferences.edit().putInt(TRIP_NAME+TREAT_NAME+"exp",a).apply();
+                                int x = (Integer)sharedPreferences.getInt(TRIP_NAME+TREAT_NAME+"exp",0);
+
+                            }
+                            try {
+                                Thread.sleep(200);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            alertDialog.dismiss();
+                        }
+                    }
+                });
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        alertDialog.dismiss();
+                    }
+                });
+                alertDialog.show();
+            }
+        });
+
+    }
+    public void makeToast(String s)
+    {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 }
