@@ -3,6 +3,7 @@ package com.example.treat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -165,6 +166,48 @@ public class Expenses_List extends AppCompatActivity {
             }
         });
 
+        listview5.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                new android.app.AlertDialog.Builder(Expenses_List.this)
+                        .setIcon(android.R.drawable.ic_delete)
+                        .setTitle("Are you sure ?")
+                        .setMessage("Would you like to delete your Expense")
+                        .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int j) {
+                                Expenses.remove(i);
+                                listview5.setAdapter(expenseConvertView);
+                                try {
+                                    sharedPreferences.edit().putString(TRIP_NAME+TREAT_NAME,ObjectSerializer.serialize(Expenses)).apply();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                if (Expenses.size()>0)
+                                {
+                                    int a = 0;
+                                    for (int ii = 0;ii<Expenses.size();ii++)
+                                    {
+                                        a = Integer.parseInt(Expenses.get(ii))+a;
+                                    }
+                                    sharedPreferences.edit().putInt(TRIP_NAME+TREAT_NAME+"exp",a).apply();
+                                    int x = (Integer)sharedPreferences.getInt(TRIP_NAME+TREAT_NAME+"exp",0);
+
+                                }
+                            }
+                        })
+
+                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+
+                        }) .create().show();
+                return true;
+            }
+        });
     }
     public void makeToast(String s)
     {
