@@ -3,12 +3,17 @@ package com.example.treat;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
+
 public class Analysis_of_Expenses extends AppCompatActivity {
     TextView t1,t2,e1,e2;
+    PieChart pieChart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +23,7 @@ public class Analysis_of_Expenses extends AppCompatActivity {
         t2 = findViewById(R.id.t2);
         e1 = findViewById(R.id.e1);
         e2 = findViewById(R.id.e2);
+        pieChart = findViewById(R.id.piechart);
         Intent finalintent = getIntent();
 
         int expense1 = finalintent.getIntExtra("data1",0);
@@ -69,5 +75,64 @@ public class Analysis_of_Expenses extends AppCompatActivity {
         }
         e1.setText(str1);
         e2.setText(str2);
+        if (expense1>0||expense2>0||expense3>0)
+        {
+            setDataPieChart(expense1,expense2,expense3,name1,name2,name3);
+        }
+
+    }
+    private void setDataPieChart(int ee1,int ee2 , int ee3,String n1 , String n2 , String n3)
+    {
+
+        TextView a,b,c;
+        a = findViewById(R.id.piea);
+        b = findViewById(R.id.pieb);
+        c = findViewById(R.id.piec);
+
+        int total = ee1 + ee2 + ee3 ;
+        int p1 = ee1*100/total;
+        int p2 = ee2*100/total;
+        int p3 = 100 - (p1+p2);
+
+        n1 = spaceAligner(n1);
+        n2 = spaceAligner(n2);
+        n3 = spaceAligner(n3);
+
+        a.setText("         "+n1+p1+" %");
+        b.setText("         "+n2+p2+" %");
+        c.setText("         "+n3+p3+" %");
+        // Set the percentage of language used
+//        tvR.setText(Integer.toString(40));
+//        tvPython.setText(Integer.toString(30));
+//        tvCPP.setText(Integer.toString(5));
+//        tvJava.setText(Integer.toString(25));
+
+        // Set the data and color to the pie chart
+        pieChart.addPieSlice(
+                new PieModel(
+                        n1,
+                        p1,
+                        Color.parseColor("#FFA726")));
+        pieChart.addPieSlice(
+                new PieModel(
+                        n2,
+                        p2,
+                        Color.parseColor("#66BB6A")));
+        pieChart.addPieSlice(
+                new PieModel(
+                        n3,
+                        p3,
+                        Color.parseColor("#EF5350")));
+
+        // To animate the pie chart
+        pieChart.startAnimation();
+    }
+    private String spaceAligner(String s)
+    {
+        for (int i = 0 ;i<50-s.length();i++)
+        {
+            s = s+" ";
+        }
+        return s;
     }
 }

@@ -7,8 +7,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="389dp"
-        android:layout_height="47dp"
+        android:layout_width="370dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingStart="5dp"
@@ -21,9 +24,10 @@
 
         <TextView
             android:id="@+id/expense_text"
-            android:layout_width="392dp"
+            android:layout_width="361dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/round_corner_textview"
             android:gravity="center|center_horizontal"

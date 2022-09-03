@@ -11,7 +11,7 @@
 
     <!-- This is the border color -->
 
-    <gradient android:startColor="#41E384" android:angle="180"
+    <gradient android:startColor="#9BEDBD" android:angle="180"
         android:centerColor="#22FBDE"
         android:endColor="#16CFEC"
         />

@@ -183,6 +183,7 @@ public class Expenses_List extends AppCompatActivity {
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
+
                                 if (Expenses.size()>0)
                                 {
                                     int a = 0;
@@ -193,6 +194,10 @@ public class Expenses_List extends AppCompatActivity {
                                     sharedPreferences.edit().putInt(TRIP_NAME+TREAT_NAME+"exp",a).apply();
                                     int x = (Integer)sharedPreferences.getInt(TRIP_NAME+TREAT_NAME+"exp",0);
 
+                                }
+                                else
+                                {
+                                    sharedPreferences.edit().putInt(TRIP_NAME+TREAT_NAME+"exp",0).apply();
                                 }
                             }
                         })
