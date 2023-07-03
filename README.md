@@ -10,8 +10,13 @@ your friends expenses and share the expense equally
   chart analysis of all the 3 friends in contribution
    of their expenses of the trip. User can also use 
    it as a personal expense manager. 
+   
+## Local Storage
+All the trips details is stored in offline mode using shared prefernces using object serializer-deserializer
 
-
+## Librarires Used
+ - EazeGraph is an Android library for creating chart analysis and expense distribution
+- [@Github Link Here]((https://github.com/paulroehr/EazeGraph)) 
 
 ## Features
 
@@ -21,7 +26,7 @@ your friends expenses and share the expense equally
 - Can be used for tracking personal expenses
   
 ## Contact Details
-Ekank - ekank1410@gmail.com
 
+Ekank - ekank1410@gmail.com
 Prasanna Kumar - baliprasanna@gmail.com
 
