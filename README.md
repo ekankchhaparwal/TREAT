@@ -28,5 +28,6 @@ All the trips details is stored in offline mode using shared prefernces using ob
 ## Contact Details
 
 Ekank - ekank1410@gmail.com
+
 Prasanna Kumar - baliprasanna@gmail.com
 
