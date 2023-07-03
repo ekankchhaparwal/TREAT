@@ -14,7 +14,7 @@ your friends expenses and share the expense equally
 ## Local Storage
 All the trips details is stored in offline mode using shared prefernces using object serializer-deserializer
 
-## Librarires Used
+## Libraries Used
  - EazeGraph is an Android library for creating chart analysis and expense distribution
 - [@Github Link Here](https://github.com/paulroehr/EazeGraph)
 
