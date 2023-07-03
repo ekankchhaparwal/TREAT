@@ -24,4 +24,5 @@ your friends expenses and share the expense equally
 ## Authors
 
 - [@Ekank Chhaparwal](https://www.github.com/ekankchhaparwal)
+- [@Prasanna Kumar](https://www.github.com/prasannakumar)
 
