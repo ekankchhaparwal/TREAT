@@ -18,11 +18,9 @@ your friends expenses and share the expense equally
 - Update/Delete any Expense 
 - Delete the non-useful trips
 - Pie Chart model for your expenses
-
-
-
-## Authors
-
-- [@Ekank Chhaparwal](https://www.github.com/ekankchhaparwal)
-- [@Prasanna Kumar](https://www.github.com/prasannakumar)
+- Can be used for tracking personal expenses
+  
+## Contact Details
+Ekank - ekank1410@gmail.com
+Prasanna Kumar - baliprasanna@gmail.com
 
