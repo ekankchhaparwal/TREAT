@@ -22,5 +22,6 @@ your friends expenses and share the expense equally
   
 ## Contact Details
 Ekank - ekank1410@gmail.com
+
 Prasanna Kumar - baliprasanna@gmail.com
 
