@@ -16,7 +16,7 @@ All the trips details is stored in offline mode using shared prefernces using ob
 
 ## Librarires Used
  - EazeGraph is an Android library for creating chart analysis and expense distribution
-- [@Github Link Here]((https://github.com/paulroehr/EazeGraph)) 
+- [@Github Link Here](https://github.com/paulroehr/EazeGraph)
 
 ## Features
 
